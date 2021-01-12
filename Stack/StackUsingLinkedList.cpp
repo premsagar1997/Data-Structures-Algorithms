@@ -1,10 +1,13 @@
-//Stack Using Array
+//Stack Using Linked List
 #include<iostream>
 using namespace std;
 
-#define N 10
-int stack[N];
-int top = -1;
+struct node {
+    int data;
+    struct node *next;
+};
+
+struct node *top = NULL;
 
 /** Operation: Push element into stack
  * @param data
@@ -12,10 +15,10 @@ int top = -1;
  * Complexity: O(1)
  */
 void push(int data) {
-    if(top == N-1) //check for overflow condition
-        cout<<"Overflow"<<endl;
-    else
-        stack[++top] = data;
+    struct node *newNode = (struct node *) malloc(sizeof(struct node));
+    newNode->data = data;
+    newNode->next = top;
+    top = newNode;
 }
 
 /** Operation: Remove top element from stack
@@ -23,12 +26,13 @@ void push(int data) {
  * Complexity: O(1)
  */
 void pop() {
-    if(top == -1)
+    if(top == NULL) {
         cout<<"Underflow"<<endl;
-    else {
-        int item = stack[top];
-        top--;
-        cout<<"Popped item: "<<item<<endl;
+    } else {
+        struct node *temp = top;
+        top = top->next;
+        cout<<"Popped element is "<<temp->data<<endl;
+        free(temp);
     }
 }
 
@@ -37,11 +41,10 @@ void pop() {
  * Complexity: O(1)
  */
 void peek() {
-    if(top == -1)
+    if(top == NULL) {
         cout<<"Underflow"<<endl;
-    else {
-        int item = stack[top];
-        cout<<"Peek item: "<<item<<endl;
+    } else {
+        cout<<"Peek element is "<<top->data<<endl;
     }
 }
 
@@ -50,12 +53,15 @@ void peek() {
  * Complexity: O(N)
  */
 void display() {
-    if(top == -1)
+    struct node *temp = top;
+    if(top == NULL) {
         cout<<"Underflow"<<endl;
-    else {
-        cout<<"Stack elements: ";
-        for(int i = top; i >= 0; i--)
-            cout<<stack[i]<<endl;
+        return;
+    }
+
+    while(temp != NULL) {
+        cout<<temp->data<<" ";
+        temp = temp->next;
     }
 }
 
