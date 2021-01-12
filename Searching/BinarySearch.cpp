@@ -4,7 +4,7 @@ using namespace std;
 /** Recursive Implementation of Binary Search
  * Binary Search - algorithm that finds the position of a target value within a sorted array
  * @param - array, left bound, right bound, element
- * @return - position of target value
+ * @return - position of target value if value present in array else it will return -1
  * Complexity - O(log N)
  */
 int binarySearch(int arr[], int l, int r, int item) {
@@ -23,7 +23,7 @@ int binarySearch(int arr[], int l, int r, int item) {
 /** Iterative Implementation of Binary Search
  * Binary Search - algorithm that finds the position of a target value within a sorted array
  * @param - array, left bound, right bound, element
- * @return - position of target value
+ * @return - position of target value if value present in array else it will return -1
  * Complexity - O(log N)
  */
 int binary_search(int arr[], int l, int r, int item) {
