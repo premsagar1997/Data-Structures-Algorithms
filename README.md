@@ -3,6 +3,7 @@
 1. Linked List
     - Singly Linked List
     - Reverse Singly Linked List
+    - Middle of Linked List
 2. Stack
     - Stack Using Array
     - Stack Using Linked List
