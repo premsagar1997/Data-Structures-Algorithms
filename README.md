@@ -9,3 +9,5 @@
 3. Searching
     - Linear Search
     - Binary Search
+4. Sorting
+    - Bubble Sort
