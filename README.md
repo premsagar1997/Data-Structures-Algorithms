@@ -16,3 +16,4 @@
     - Selection Sort
     - Insertion Sort
     - Counting Sort
+5. Tower of Hanoi
