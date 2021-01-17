@@ -17,3 +17,4 @@
     - Insertion Sort
     - Counting Sort
 5. Tower of Hanoi
+6. Longest Common Subsequence(LCS)
