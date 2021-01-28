@@ -1,4 +1,6 @@
 #include<iostream>
+#include<stdlib.h>
+#include<stack>
 using namespace std;
 
 struct node {
@@ -9,6 +11,9 @@ struct node {
 
 struct node *head = NULL, *tail = NULL;
 
+/** Reverse doubly linked list
+ * Complexity: O(N)
+ */
 void reverseList() {
     struct node *current, *nextNode;
     current = head;
@@ -22,6 +27,28 @@ void reverseList() {
     current = head;
     head = tail;
     tail = current;
+}
+
+/** Reverse doubly linked list using stack
+ * Complexity: O(N)
+ */
+void reverseListUsingStack() {
+    stack<int> st;
+    struct node *temp = head;
+
+    //add elements to the stack
+    while(temp != NULL) {
+        st.push(temp->data);
+        temp = temp->next;
+    }
+
+    //popping the elements out and updating doubly linked
+    temp = head;
+    while(temp != NULL) {
+        temp->data = st.top();
+        st.pop();
+        temp = temp->next;
+    }
 }
 
 void createList() {
@@ -55,6 +82,8 @@ int main() {
     createList();
     displayList();
     reverseList();
+    displayList();
+    reverseListUsingStack();
     displayList();
     return 0;
 }
