@@ -6,6 +6,7 @@
     - Middle of Linked List
     - Doubly Linked List
     - Reverse Doubly Linked List
+    - Circular Linked List
 2. Stack
     - Stack Using Array
     - Stack Using Linked List
