@@ -1,3 +1,5 @@
+// Check if a substring can be Palindromic by replacing K characters
+
 import java.util.*;
 public class CanMakePalindrome {
    

@@ -66,8 +66,8 @@ void postOrder(Node *root) {
     if(root == NULL) {
         return;
     }
-    inOrder(root->left);
-    inOrder(root->right);
+    postOrder(root->left);
+    postOrder(root->right);
     cout<<root->data<<" ";
 }
 

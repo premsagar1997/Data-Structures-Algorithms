@@ -24,3 +24,6 @@
 7. Knapsack Problem
     - 0-1 Knapsack
     - Fractional Knapsack
+8. Tree
+    - Binary Tree
+    - Binary Tree Traversal (InOrder, PreOrder, PostOrder)
