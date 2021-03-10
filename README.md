@@ -27,3 +27,6 @@
 8. Tree
     - Binary Tree
     - Binary Tree Traversal (InOrder, PreOrder, PostOrder)
+    - Insertion in level order
+    - Deletion in binary tree
+    - Breadth first traversal or level order traversal

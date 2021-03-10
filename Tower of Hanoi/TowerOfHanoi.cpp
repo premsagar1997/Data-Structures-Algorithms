@@ -15,7 +15,7 @@ void towerOfHanoi(int n, char A, char B, char C) {
     }
 
     towerOfHanoi(n-1, A, C, B);
-     cout<<"Move disk "<<n<<" from "<<A<<" -> "<<C<<endl;
+    cout<<"Move disk "<<n<<" from "<<A<<" -> "<<C<<endl;
     towerOfHanoi(n-1, B, A, C);
 }
 
