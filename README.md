@@ -30,3 +30,4 @@
     - Insertion in level order
     - Deletion in binary tree
     - Breadth first traversal or level order traversal
+    - Depth first traversal (InOrder, PreOrder, PostOrder)
