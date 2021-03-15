@@ -7,6 +7,7 @@
     - Doubly Linked List
     - Reverse Doubly Linked List
     - Circular Linked List
+    - Reverse Circular Linked List
 2. Stack
     - Stack Using Array
     - Stack Using Linked List
@@ -31,3 +32,5 @@
     - Deletion in binary tree
     - Breadth first traversal or level order traversal
     - Depth first traversal (InOrder, PreOrder, PostOrder)
+    - Binary tree array implementation
+    - Invert binary tree
