@@ -34,3 +34,5 @@
     - Depth first traversal (InOrder, PreOrder, PostOrder)
     - Binary tree array implementation
     - Invert binary tree
+9. Queue
+    - Queue Using Array
