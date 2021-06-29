@@ -6,6 +6,11 @@ int queue[N];
 int rear = -1;
 int front = -1;
 
+/** Task: Insert an element into queue
+ * Complexity: O(1)
+ * @return void
+ * @param data-to be inserted
+ */
 void enqueue(int data) {
   if (rear == N - 1) {
     cout<<"Queue overflow!!!\n";
@@ -17,6 +22,10 @@ void enqueue(int data) {
   }
 }
 
+/** Task: Delete an element from queue
+ * Complexity: O(1)
+ * @return void
+ */
 void dequeue() {
   if (rear == -1 && front == -1)
     cout<<"Queue underflow\n";
@@ -39,17 +48,21 @@ void display() {
   }
 }
 
+/** Task: display peek(front) element of queue
+ * Complexity: O(1)
+ * @return void
+ */
 void peek() {
   if (rear == -1 && front == -1)
     cout<<"Queue underflow\n";
   else
-    cout<<"Pick element is "<<queue[front]<<endl;
+    cout<<"Peek element is "<<queue[front]<<endl;
 }
 
 int main() {
   int op, x;
   do {
-    cout<<"1->Enqueue\n2->Queue\n3->Display\n4->Peek\n5->Exit\n";
+    cout<<"1->Enqueue\n2->Dequeue\n3->Display\n4->Peek\n5->Exit\n";
     cin>>op;
     switch (op) {
       case 1:

@@ -36,3 +36,5 @@
     - Invert binary tree
 9. Queue
     - Queue Using Array
+    - Circular Queue Using Array
+    - Queue Using Linkedlist
