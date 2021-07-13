@@ -40,3 +40,8 @@
     - Queue Using Linkedlist
     - Circular Queue Using Linkedlist
     - Queue Using Stacks
+    - Deque Using Circular Array
+10. Priority Queue
+    - Priority queue using array
+    - Priority queue using linked list
+    
