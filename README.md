@@ -20,6 +20,7 @@
     - Selection Sort
     - Insertion Sort
     - Counting Sort
+    - Heap Sort
 5. Tower of Hanoi
 6. Longest Common Subsequence(LCS)
 7. Knapsack Problem
