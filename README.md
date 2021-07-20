@@ -45,4 +45,5 @@
 10. Priority Queue
     - Priority queue using array
     - Priority queue using linked list
+    - Priority queue using binary heap
     
