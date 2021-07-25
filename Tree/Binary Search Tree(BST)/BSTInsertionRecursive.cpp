@@ -44,13 +44,13 @@ void inOrder(struct node* root) {
 int main() {
   struct node *root = NULL;
 
-  root = insert(root, createNode(50));
-  insert(root, createNode(30));
-  insert(root, createNode(20));
-  insert(root, createNode(40));
-  insert(root, createNode(70));
-  insert(root, createNode(60));
-  insert(root, createNode(80));
+  root = insert(root, createNode(22));
+  insert(root, createNode(31));
+  insert(root, createNode(42));
+  insert(root, createNode(28));
+  insert(root, createNode(7));
+  insert(root, createNode(6));
+  insert(root, createNode(14));
 
   inOrder(root);
   cout<<endl;
