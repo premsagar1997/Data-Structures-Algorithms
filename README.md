@@ -35,6 +35,10 @@
     - Depth first traversal (InOrder, PreOrder, PostOrder)
     - Binary tree array implementation
     - Invert binary tree
+    - Binary Search Tree (BST)
+        - Recursive insertion in BST
+        - Iterative insertion in BST
+    - AVL Tree
 9. Queue
     - Queue Using Array
     - Circular Queue Using Array
