@@ -1,4 +1,4 @@
-# TheCode
+# Data Structure and Algorithm
 
 1. Linked List
     - Singly Linked List
