@@ -38,6 +38,7 @@
     - Binary Search Tree (BST)
         - Recursive insertion in BST
         - Iterative insertion in BST
+        - Delete node from BST
     - AVL Tree
 9. Queue
     - Queue Using Array

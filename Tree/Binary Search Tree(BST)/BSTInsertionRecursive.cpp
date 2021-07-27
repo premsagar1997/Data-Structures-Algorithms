@@ -27,7 +27,7 @@ struct node* insert(struct node *root, struct node *newNode) {
   
   if (newNode->key < root->key)
     root->left = insert(root->left, newNode);
-  else if(newNode->key > root->key)
+  else if (newNode->key > root->key)
     root->right = insert(root->right, newNode);
   return root;
 }
