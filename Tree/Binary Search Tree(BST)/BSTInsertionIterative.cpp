@@ -52,6 +52,22 @@ void inOrder(struct node* root) {
   inOrder(root->right);
 }
 
+struct node* search(struct node* root, int key) {
+  if (root == NULL)
+    return root;
+
+  struct node* current = root;
+  while (current != NULL) {
+    if (key == current->key)
+      return current;
+    else if (key < current->key)
+      current = current->left;
+    else
+      current = current->right;
+  }
+  return NULL;
+}
+
 int main() {
   struct node *root = NULL;
 
