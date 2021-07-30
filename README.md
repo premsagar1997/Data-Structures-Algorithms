@@ -36,6 +36,9 @@
     - Binary tree array implementation
     - Invert binary tree
     - Height of binary tree
+    - Iterative preorder traversal
+    - Iterative inorder traversal
+    - Iterative postorder traversal
     - Binary Search Tree (BST)
         - Recursive insertion in BST
         - Iterative insertion in BST
