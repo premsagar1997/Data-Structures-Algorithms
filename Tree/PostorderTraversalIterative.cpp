@@ -1,14 +1,6 @@
 // An iterative postorder traversal of a binary tree
 // Time Complexity - O(n)
 
-/** Alorithm
- * 1 Push root to first stack
- * 2 Loop while first stack is not empty
- *    2.a Pop a node from first stack and push it to second stack
- *    2.b Push left & right children of the popped node to first stack
- * 3 Print contents of second stack
-*/
-
 #include<iostream>
 #include<stack>
 using namespace std;
@@ -26,6 +18,13 @@ Node* createNode(int key) {
   return newNode;
 }
 
+/** Alorithm - Post order traversal using 2 stacks
+ * 1 Push root to first stack
+ * 2 Loop while first stack is not empty
+ *    2.a Pop a node from first stack and push it to second stack
+ *    2.b Push left & right children of the popped node to first stack
+ * 3 Print contents of second stack
+*/
 void postorder(Node* root) {
   if (root == NULL)
     return;
@@ -50,6 +49,45 @@ void postorder(Node* root) {
   }
 }
 
+/**Postorder traversal using one stack
+ */
+void postOrderTraversal(Node* root) {
+  if (root == NULL)
+    return;
+
+  stack<Node*> st;
+  Node* current = root; //set current as root
+  do {
+    //push the right child and then current into stack
+    //set current as current->left
+    while (current != NULL) { //move to leftmost node
+      if (current->right != NULL)
+        st.push(current->right);
+      st.push(current);
+      current = current->left;
+    }
+
+    //pop an item from stack & set it to current
+    if (!st.empty()) {
+      current = st.top();
+      st.pop();
+    }
+
+    //If the popped item has a right child and the right child is at top of stack,
+    //then remove the right child from stack, push the current back and set current as current's right child.
+    if (current->right != NULL && !st.empty() && current->right == st.top()) {
+      st.pop();
+      st.push(current);
+      current = current->right;
+    } else if(current) {
+      //print current's data and set current as NULL.
+      cout<<current->key<<" ";
+      current = NULL;
+    }
+
+  } while (!st.empty());
+}
+
 int main() {
   Node* root = createNode(30);
   root->left = createNode(20);
@@ -59,6 +97,8 @@ int main() {
   root->right = createNode(50);
   root->right->left = createNode(45);
   postorder(root);
+  cout<<endl;
+  postOrderTraversal(root);
   cout<<endl;
   return 0;
 }
