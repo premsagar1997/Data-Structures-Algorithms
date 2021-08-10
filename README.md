@@ -43,7 +43,7 @@
         - Recursive insertion in BST
         - Iterative insertion in BST
         - Delete node from BST
-    - AVL Tree
+    - AVL Tree (Insertion & Deletion)
 9. Queue
     - Queue Using Array
     - Circular Queue Using Array
