@@ -39,6 +39,7 @@
     - Iterative preorder traversal
     - Iterative inorder traversal
     - Iterative postorder traversal
+    - Diameter of binary tree
     - Binary Search Tree (BST)
         - Recursive insertion in BST
         - Iterative insertion in BST
