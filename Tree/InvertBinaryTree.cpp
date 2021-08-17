@@ -21,7 +21,7 @@ Node *createNode(int data) {
 }
 
 void invertBinaryTree(Node *root) {
-  if(root == NULL)
+  if (root == NULL)
     return;
 
   Node *temp = NULL;
@@ -31,6 +31,19 @@ void invertBinaryTree(Node *root) {
   temp = root->left;
   root->left = root->right;
   root->right = temp;
+}
+
+Node* invert(Node *root) {
+  if (root == NULL)
+    return NULL;
+
+  Node* leftTree = invert(root->left);
+  Node* rightTree = invert(root->right);
+
+  root->left = rightTree;
+  root->right = leftTree;
+
+  return root;
 }
 
 void mirror(Node *root) {

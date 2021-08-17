@@ -1,3 +1,5 @@
+//The diameter of a tree is the number of nodes on the longest path between two leaves in the tree
+
 #include<iostream>
 using namespace std;
 
