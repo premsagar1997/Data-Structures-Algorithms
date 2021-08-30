@@ -45,6 +45,9 @@
         - Iterative insertion in BST
         - Delete node from BST
     - AVL Tree (Insertion & Deletion)
+    - Splay Tree
+        - Search in splay tree
+        - Insertion in splay tree
 9. Queue
     - Queue Using Array
     - Circular Queue Using Array
