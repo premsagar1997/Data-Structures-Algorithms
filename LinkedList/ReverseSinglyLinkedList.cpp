@@ -18,7 +18,7 @@ void reverseList() {
     struct node *prevPtr, *currentPtr, *nextPtr;
     prevPtr = NULL;
     currentPtr = nextPtr = head;
-    while(nextPtr != NULL) {
+    while (nextPtr != NULL) {
         nextPtr = nextPtr->next;
         currentPtr->next = prevPtr;
         prevPtr = currentPtr;
