@@ -11,6 +11,7 @@ class Graph {
     Graph(int V);
     void addEdge(int v, int w);
     void BFS(int s);
+    void BFSTraversal(int s);
 };
 
 Graph::Graph(int V) {
@@ -47,6 +48,32 @@ void Graph::BFS(int s) {
   }
 }
 
+void Graph::BFSTraversal(int s) {
+  bool *visited = new bool[V];
+  for (int i = 0; i < V; i++)
+    visited[i] = false;
+
+  queue<int> mQueue;
+
+  visited[s] = true;
+  mQueue.push(s);
+
+  vector<int>::iterator it;
+
+  while (!mQueue.empty()) {
+    s = mQueue.front();
+    cout<<s<<" ";
+    mQueue.pop();
+
+    for (it = adj[s].begin(); it != adj[s].end(); ++it) {
+      if (!visited[*it]) {
+        visited[*it] = true;
+        mQueue.push(*it);
+      }
+    }
+  }
+}
+
 int main() {
   Graph g(4);
   g.addEdge(0, 1);
@@ -56,6 +83,8 @@ int main() {
   g.addEdge(2, 3);
   g.addEdge(3, 3);
   g.BFS(2);
+  cout<<"\n";
+  g.BFSTraversal(2);
   cout<<"\n";
   return 0;
 }
