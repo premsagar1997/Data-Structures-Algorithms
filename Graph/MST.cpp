@@ -16,4 +16,18 @@
  * 1. Prim's Algorithm
  * 2. Kruskal's Algorithm
  * 
+ * Spanning Tree Applications
+ * 1. Computer Network Routing Protocol
+ * 2. Cluster Analysis
+ * 3. Civil Network Planning
+ * 
+ * Minimum Spanning Tree Applications
+ * 1. To find paths in the map
+ * 2. To design network like telecommunication networks, water supply networks, and electrical grids
+ * 
+ * 
+ * Strongly Connected Components
+ * A strongly connected component is the portion of a directed graph in which there is a path from each vertex to another vertex.
+ * It is applicable only on a directed graph.
+ * These components can be found using "Kosaraju's Algorithm"
  */

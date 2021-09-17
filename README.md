@@ -40,6 +40,8 @@
     - Iterative inorder traversal
     - Iterative postorder traversal
     - Diameter of binary tree
+    - Top view of binary tree
+    - Lowest Common Ancestor in a Binary Tree
     - Binary Search Tree (BST)
         - Recursive insertion in BST
         - Iterative insertion in BST
@@ -59,7 +61,6 @@
     - Priority queue using array
     - Priority queue using linked list
     - Priority queue using binary heap
-    
 11. Graph
     - Introduction
     - BFS
