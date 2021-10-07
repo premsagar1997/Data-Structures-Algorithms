@@ -25,6 +25,26 @@ void printDistance(int dist[]) {
   }
 }
 
+void printPath(int parent[], int j) {
+  if (parent[j] == -1)
+    return;
+
+  printPath(parent, parent[j]);
+
+  cout<<j<<" ";
+}
+
+void printSolution(int dist[], int n, int parent[]) {
+  int src = 0;
+  cout<<"Vertex \t\t Distance \t\t Path\n";
+  for (int i = 1; i < V; i++) {
+    cout<<src<<"->"<<i<<"\t\t"<<dist[i]<<"\t\t"<<src<<" ";
+    printPath(parent, i);
+    cout<<endl;
+  }
+  cout<<endl;
+}
+
 /** Time complexity - O(V^2)
  * If the Input graph is represented using adjacency list, it can be reduced to O(ElogV)
  * @param - graph[][] and source
@@ -38,6 +58,10 @@ void dijkstra(int graph[V][V], int src) {
   //sptSet[i] will be true if vertex i is included in shortest path tree
   //or shortest distance from src to i is finalized
   bool sptSet[V];
+
+  //parent array to store shortest path tree
+  int parent[V];
+  parent[0] = -1;
 
   //initialize all distance as Infinite and sptSet[] as false
   for (int i = 0; i < V; i++) {
@@ -60,12 +84,13 @@ void dijkstra(int graph[V][V], int src) {
       //update dist[v] only if is not in sptSet, there is an edge from u to v,
       //and total weight of the path from src to v through u is smaller than current value of dist[v]
       if (!sptSet[v] && graph[u][v] && dist[u] != INT_MAX && (dist[u] + graph[u][v]) < dist[v]) {
+        parent[v] = u;
         dist[v] = dist[u] + graph[u][v];
       }
     }
   }
 
-  printDistance(dist);
+  printSolution(dist, V, parent);
 }
 
 int main() {
