@@ -1,5 +1,6 @@
 //Dijkstra's Algorithm for Adjacency List Representation
-
+//Dijkstra's algorithm is a Greedy algorithm
+//Dijkstra doesn't work with for Graphs with neagtive weight cycle
 #include<iostream>
 using namespace std;
 
