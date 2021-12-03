@@ -66,3 +66,7 @@
     - BFS
     - Recursive DFS
     - Iterative DFS
+
+12. Disjoint Set
+    - Disjoint Set
+    - Disjoint Set Union By Rank And Path Compression
