@@ -31,10 +31,12 @@ struct node* insert(struct node *root, struct node *newNode) {
         break;
       } else if (newNode->key < temp->key && temp->left == NULL) {
         temp->left = newNode;
+        break;
       } else if (newNode->key < temp->key) {
         temp = temp->left;
       } else if (newNode->key > temp->key && temp->right == NULL) {
         temp->right = newNode;
+        break;
       } else if (newNode->key > temp->key) {
         temp = temp->right;
       }
