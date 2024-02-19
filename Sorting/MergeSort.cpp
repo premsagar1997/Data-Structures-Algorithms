@@ -1,9 +1,7 @@
-/**
-  Time Complexity-
-  Best case: O(N log (N))
-  Average case: O( N log (N))
-  Worst case: O(n^2)
-  */
+// Time Complexity-
+// Best case: O(N log (N))
+// Average case: O( N log (N))
+// Worst case: O(n^2)
 
 #include <bits/stdc++.h>
 using namespace std;
