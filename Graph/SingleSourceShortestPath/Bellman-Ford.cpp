@@ -1,8 +1,8 @@
 /** Bellman-Ford Algorithm
  * Input - Graph and a source vertex src
  * Output - Shortest distance to all vertices from src.
- * If there is a neagtive weight cycle, then shortest distance are not calculated, negative weight cycle is reported
- * Time Complexity - O(VE) which is more tham Dijkstra
+ * If there is a negative weight cycle, then shortest distance are not calculated, negative weight cycle is reported
+ * Time Complexity - O(VE) which is more than Dijkstra
  * Bellman-Ford works with negative weight cycle
  */
 
