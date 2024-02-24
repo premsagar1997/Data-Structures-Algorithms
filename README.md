@@ -52,7 +52,7 @@
     - AVL Tree (Insertion & Deletion)
     - Splay Tree
         - Search in splay tree
-        - Insertion in splay tree
+        - Insertion in splay tree      
 9. Queue
     - Queue Using Array
     - Circular Queue Using Array
@@ -71,14 +71,12 @@
     - Iterative DFS
     - MST
     - Single Source Shortest Path
-          - Bellman Ford
-          - Dijkstra
-          - SSSP_BFS
-
+        - Bellman Ford
+        - Dijkstra
+        - SSSP_BFS
 12. Disjoint Set
     - Disjoint Set
     - Disjoint Set Union By Rank And Path Compression
-
 13 Dymanic Programming
     - Bellman For Algorithm
     - Floyd Warshall Algorithm
