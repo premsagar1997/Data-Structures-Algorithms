@@ -10,6 +10,8 @@ struct node {
 struct node *head = NULL;
 struct node *tail = NULL;
 
+int getListLength();
+
 //create node
 struct node* createNode(int x) {
     struct node *newNode = (struct node*)malloc(sizeof(struct node));
@@ -17,7 +19,6 @@ struct node* createNode(int x) {
     newNode->prev = newNode->next = NULL;
     return newNode;
 }
-
 
 /** Task - Insert node at beginning position
  * @param - data to be inserted
@@ -64,17 +65,62 @@ void insertAtEnd(int x) {
  * @return - void
  * Complexity - O(n)
  */
-void insertAfterPosition(int x, int p) {
+void insertAfterPosition(int x, int pos) {
+    //check for valid postion
+    if (pos < 0) {
+        cout<<"Invalid position"<<endl;
+        return;
+    }
+    //if postion is 1, then call method insertAtBeg
+    if (pos == 1) {
+        insertAtBeg(x);
+        return;
+    }
     
+    //if postion is last
+    if (pos == getListLength() + 1) {
+        insertAtEnd(x);
+        return;
+    }
+    
+    struct node *temp = head;
+    int i = 1;
+    //traverse to the postion where node has to be inserted
+    while (i < pos - 1) {
+        temp = temp->next;
+        i++;
+    }
+    
+    //insert node & update the links
+    struct node *newNode = createNode(x);
+    newNode->prev = temp;
+    newNode->next = temp->next;
+    temp->next = newNode;
+    temp->next->prev = newNode;
 }
-
 
 /** Task - Delete node from beginning
  * @return - void
  * Complexity - O(1)
  */
 void removeFromBeginning() {
+    if (head == NULL && tail == NULL) {
+        cout<<"List is empty"<<endl;
+        return;
+    }
     
+    struct node *temp = head;
+    
+    //if there is only one node is present in the list
+    if (head == head->next) {
+        head = tail = NULL;
+    } else { //more the one node present
+        head = head->next;
+        head->prev = tail;
+        tail->next = head;
+    }
+    
+    free(temp);
 }
 
 /** Task - Delete node from end position
@@ -82,16 +128,71 @@ void removeFromBeginning() {
  * Complexity - O(1)
  */
 void removeFromEnd() {
+    if (head == NULL && tail == NULL) {
+        cout<<"List is empty"<<endl;
+        return;
+    }
     
+    struct node *temp = tail;
+    
+    //if there is only one node is present in the list
+    if (tail == tail->next) {
+        head = tail = NULL;
+    } else { //more the one node present
+        tail = tail->prev;
+        tail->next = head;
+        head->prev = tail;
+    }
+    
+    free(temp);
 }
-
 
 /** Task - Delete node from any given postion
  * @return - void
  * Complexity - O(n)
  */
-void removeFromPosition(int p) {
+void removeFromPosition(int pos) {
+    //check for valid postion
+    if (pos < 1) {
+        cout<<"Invalid postion"<<endl;
+        return;
+    }
     
+    //if postion is 1, then remove node from beginning postion
+    if (pos == 1) {
+        removeFromBeginning();
+        return;
+    }
+    
+    //if postion is last
+    if (pos == getListLength()) {
+        removeFromEnd();
+        return;
+    }
+    
+    if (head == NULL && tail == NULL) {
+        cout<<"List is empty"<<endl;
+        return;
+    }
+    
+    struct node *temp = head;
+    
+    //if there is only one node is present in the list
+    if (head == head->next) {
+        head = tail = NULL;
+        free(temp);
+        return;
+    }
+    
+    int i = 1;
+    while (i < pos) {
+        i++;
+        temp = temp->next;
+    }
+    
+    temp->prev->next = temp->next;
+    temp->next->prev = temp->prev;
+    free(temp);
 }
 
 /** Task - display list
@@ -102,6 +203,7 @@ void displayList() {
     //if there is no node present in list
     if (head == NULL && tail == NULL) {
         cout<<"List is empty"<<endl;
+        return;
     }
     
     struct node * temp = head;
@@ -110,6 +212,17 @@ void displayList() {
         temp = temp->next;
     }
     cout<<temp->data<<endl;
+    cout<<getListLength();
+}
+
+int getListLength() {
+    struct node *temp = head;
+    int i = 1;
+    while (temp->next != head) {
+        i++;
+        temp = temp->next;
+    }
+    return i;
 }
 
 //driver method
