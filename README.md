@@ -71,9 +71,9 @@
     - Iterative DFS
     - MST
     - Single Source Shortest Path
-          Bellman Ford
-          Dijkstra
-          SSSP_BFS
+          - Bellman Ford
+          - Dijkstra
+          - SSSP_BFS
 
 12. Disjoint Set
     - Disjoint Set
