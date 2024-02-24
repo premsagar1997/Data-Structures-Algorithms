@@ -8,6 +8,7 @@
     - Reverse Doubly Linked List
     - Circular Linked List
     - Reverse Circular Linked List
+    - Doubly Circular Linked List
 2. Stack
     - Stack Using Array
     - Stack Using Linked List
