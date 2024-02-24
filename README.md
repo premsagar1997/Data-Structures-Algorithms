@@ -22,6 +22,8 @@
     - Insertion Sort
     - Counting Sort
     - Heap Sort
+    - Merge Sort
+    - Quick Sort
 5. Tower of Hanoi
 6. Longest Common Subsequence(LCS)
 7. Knapsack Problem
@@ -54,8 +56,8 @@
 9. Queue
     - Queue Using Array
     - Circular Queue Using Array
-    - Queue Using Linkedlist
     - Circular Queue Using Linkedlist
+    - Queue Using Linkedlist
     - Queue Using Stacks
     - Deque Using Circular Array
 10. Priority Queue
@@ -67,6 +69,11 @@
     - BFS
     - Recursive DFS
     - Iterative DFS
+    - MST
+    - Single Source Shortest Path
+          Bellman Ford
+          Dijkstra
+          SSSP_BFS
 
 12. Disjoint Set
     - Disjoint Set
@@ -74,3 +81,4 @@
 
 13 Dymanic Programming
     - Bellman For Algorithm
+    - Floyd Warshall Algorithm
