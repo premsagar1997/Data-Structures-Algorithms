@@ -13,7 +13,7 @@ void merge(int arr[], int lb, int mid, int ub) {
         L[i] = arr[lb + i];
     }
     
-    for (int i = 0; i < n1; i++) {
+    for (int i = 0; i < n2; i++) {
         R[i] = arr[mid + i + 1];
     }
     
